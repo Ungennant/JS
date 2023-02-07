@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Lesson 1</title>
+</head>
+
+<body>
+
+    <script>
+        var admin;
+        var name = "John";
+        admin = name;
+        console.log(admin);
+    </script>
+    <script>
+        var admin;
+        var password;
+
+        if (admin == "admin") {
+            console.log("Confirmed");
+        } else if (admin != "admin") {
+            console.log("I dont know you");
+        } else {
+            console.log("Canceled.");
+        }
+
+        if (password == "TheMaster") {
+            console.log("Welcome!");
+        } else if (password != "TheMaster") {
+            console.log("Wrong pass")
+        } else {
+            console.log("Canceled.")
+        }
+    </script>
+    <script>
+        var admin = "admin";
+        var password;
+
+        switch (admin) {
+            case "admin":
+                console.log("Username Confirmed.");
+                if (password == "TheMaster") {
+                    console.log("Welcome");
+                }
+                break;
+            case "Cancel":
+                console.log("Canceled.");
+                break;
+            default:
+                console.log("I dont know you.")
+        }
+    </script>
+</body>
+
+</html>
