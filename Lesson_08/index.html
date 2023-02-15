@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Lesson 8</title>
+    <style>
+        .dropdown-content {
+            display: none;
+
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="text">Learn Java</div>
+    <input type="button" value="Hide text" onclick="hideText()">
+    <button id="btn" onclick="hideButton()">Hide!</button>
+    <p></p>
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">University</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">University 1</a><br />
+            <a href="#">University 2</a><br />
+            <a href="#">University 3</a><br />
+        </div>
+    </div>
+
+    <script>
+        //TASK1
+        function hideButton() {
+            document.getElementById('btn').hidden = true;
+        }
+        function hideText() {
+            document.getElementById('text').hidden = true;
+        }
+    </script>
+    <script>
+        //TASK 2
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        } 
+    </script>
+</body>
+
+</html>

@@ -1,24 +1,17 @@
-function autoCompleteText(){
-    var elements = document.querySelectorAll('ul.Menu>li');
-        for(var i = 0; i<elements.length; i++){
-                var addElements = elements[i];
-                addElements.innerHTML = 'MENU ITEM';
-        };
-};
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-function getMenuTotal(){
-    var elements = document.querySelectorAll('ul.Menu>li');
-    console.log(elements.length);
-    var element = document.getElementById('total');
-        element.innerHTML = 'Total items: ' + elements.length;
-};
-
-function makeColored(){
-    var coll = document.querySelectorAll('a');
-      for (var i = 0; i<coll.length; i++) {
-        if ((coll[i].matches("a[href*='http://']") || coll[i].matches("a[href*='ftp://']")) && !(coll[i].matches('a[href*="http://internal.com"]'))) {
-          coll[i].classList.add('external-red');
-       };
-      };
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
-
+  }
+} 
