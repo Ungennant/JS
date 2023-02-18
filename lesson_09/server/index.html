@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Lesson 9</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <form>
+    <div class="container">
+      <h1>Реєстрація користувача POST</h1>
+      <p>Заповніть форму для реєстрації нового користувача</p>
+      <hr>
+
+      <label for="lName"><b>Прізвище користувача</b></label>
+      <input type="text" placeholder="Введіть Прізвище" name="lName" id="lName" required>
+  
+      <label for="fName"><b>Ім'я користувача</b></label>
+      <input type="text" placeholder="Введіть ім'я" name="fName" id="fName" required>
+  
+      <label for="Age"><b>Вік користувача</b></label>
+      <input type="text" placeholder="Введіть вік" name="Age" id="Age" required>
+  
+      <label for="Address"><b>Введіть країну проживання</b></label>
+      <input type="text" placeholder="Введіть країну проживання" name="Address" id="Address" required>
+      <hr>
+  
+      <p>Створюючи обліковий запис, ви погоджуєтеся з нашими <a href="#">Умовами та конфіденційністю</a>.</p>
+      <button type="submit" class="registerbtn" onclick="sendPost()">Зареєструватись</button>
+    </div>
+  
+    <div class="container signin">
+      <p>Вже є аккаунт? <a href="#">Увійти</a>.</p>
+    </div>
+  </form> 
+
+
+  <form>
+    <div class="container">
+      <h1>Реєстрація користувача GET</h1>
+      <p>Заповніть форму для реєстрації нового користувача</p>
+      <hr>
+
+      <label for="lname"><b>Прізвище користувача</b></label>
+      <input type="text" placeholder="Введіть Прізвище" name="lname" id="lname" required>
+  
+      <label for="fname"><b>Ім'я користувача</b></label>
+      <input type="text" placeholder="Введіть ім'я" name="fname" id="fname" required>
+  
+      <label for="age"><b>Вік користувача</b></label>
+      <input type="text" placeholder="Введіть вік" name="age" id="age" required>
+  
+      <label for="address"><b>Введіть країну проживання</b></label>
+      <input type="text" placeholder="Введіть країну проживання" name="address" id="address" required>
+      <hr>
+  
+      <p>Створюючи обліковий запис, ви погоджуєтеся з нашими <a href="#">Умовами та конфіденційністю</a>.</p>
+      <button type="submit" class="registerbtn" onclick="sendGet()">Зареєструватись</button>
+    </div>
+  
+    <div class="container signin">
+      <p>Вже є аккаунт? <a href="#">Увійти</a>.</p>
+    </div>
+  </form> 
+
+   
+      <script src="./js/script.js">
+      </script>
+      <script src="./js/formvalidator.js">
+      </script>
+</body>
+
+</html>
